@@ -14,12 +14,31 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         <input type="hidden" name="id" value="<?= isset($id) ? $id : '' ?>">
         <input type="hidden" name="cab_id" value="<?= isset($_GET['cid']) ? $_GET['cid'] : (isset($cab_id) ? $cab_id : "") ?>">
         <div class="form-group">
-            <label for="pickup_zone" class="control-label">Pickup Zone</label>
-            <textarea name="pickup_zone" id="pickup_zone" rows="4" class="form-control form-control-sm rounded-0" required></textarea>
+        <label for="pickup_zone" class="control-label">Pickup Zone</label>
+            <!-- <textarea name="pickup_zone" id="pickup_zone" rows="4" class="form-control form-control-sm rounded-0" required></textarea> -->
+            <select name="pickup_zone" id="pickup_zone" rows="4" class="form-control form-control-sm rounded-0" required>
+                <option value="" disabled selected>Please select pick up destination</option>
+                <option value="Galle">Galle</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Nugegoda">Nugegoda</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Jaffna">Jaffna</option>
+            </select>
+
         </div>
         <div class="form-group">
             <label for="drop_zone" class="control-label">Drop-off Zone</label>
-            <textarea name="drop_zone" id="drop_zone" rows="4" class="form-control form-control-sm rounded-0" required></textarea>
+            <!-- <textarea name="drop_zone" id="drop_zone" rows="4" class="form-control form-control-sm rounded-0" required></textarea> -->
+            <select name="drop_zone" id="drop_zone" rows="4" class="form-control form-control-sm rounded-0" required>
+                <option value="" disabled selected>Please select drop off destination</option>
+                <option value="Galle">Galle</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Nugegoda">Nugegoda</option>
+                <option value="Gampaha">Gampaha</option>
+                <option value="Kurunegala">Kurunegala</option>
+                <option value="Jaffna">Jaffna</option>
+            </select>
         </div>
     </form>
 </div>
